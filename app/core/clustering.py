@@ -216,14 +216,11 @@ class TaskClusterer:
                 "description": "Unclustered/Noise points"
             }
         
-        import time
-        import time
-        processing_time = time.time() - getattr(self, '_start_time', time.time())
         return AnalysisResult(
             total_tasks=len(tasks),
             clusters_found=len(cluster_counts),
             cluster_details=cluster_details,
-            processing_time=max(0.0, processing_time)  # Ensure non-negative
+            processing_time=0.0
         )
     
     def _generate_analysis_result_kmeans(self, tasks: List[ProcessedTask], kmeans, optimal_k: int) -> AnalysisResult:
@@ -256,7 +253,8 @@ class TaskClusterer:
         return AnalysisResult(
             total_tasks=len(tasks),
             clusters_found=optimal_k,
-            cluster_details=cluster_details
+            cluster_details=cluster_details,
+            processing_time=0.0
         )
     
     async def close(self) -> None:
