@@ -1,0 +1,6 @@
+issue_id,summary,description,created_at,updated_at,cluster_label
+DEMO-001,Fix user login authentication,Users experiencing authentication failures after password changes,2026-03-01T09:52:01.946622,2026-03-01T09:52:01.946631,用户认证
+DEMO-002,Add password reset feature,Allow users to reset passwords via email verification,2026-03-01T09:52:01.946628,2026-03-01T09:52:01.946632,功能开发
+DEMO-003,Update user profile page,Redesign user profile interface with modern components,2026-03-01T09:52:01.946629,2026-03-01T09:52:01.946633,界面优化
+DEMO-004,Implement database optimization,Optimize database queries for better performance,2026-03-01T09:52:01.946630,2026-03-01T09:52:01.946634,性能优化
+DEMO-005,Add API rate limiting,Implement rate limiting to prevent API abuse,2026-03-01T09:52:01.946630,2026-03-01T09:52:01.946634,安全加固
