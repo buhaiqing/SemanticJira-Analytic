@@ -194,15 +194,14 @@ class ConversationalAgent:
             )
         
         try:
-            # Load and preprocess data
-            with asyncio.Lock():  # Ensure thread safety
-                tasks = self.preprocessor.load_data(file_path)
-                processed_tasks = self.preprocessor.preprocess_tasks(tasks)
-            
+            # Load and preprocess data (no lock needed - synchronous operation)
+            tasks = self.preprocessor.load_data(file_path)
+            processed_tasks = self.preprocessor.preprocess_tasks(tasks)
+
             # Store processed tasks in session context
             session.context["processed_tasks"] = processed_tasks
             session.context["total_tasks"] = len(processed_tasks)
-            
+
             return AgentResponse(
                 message=f"✅ 已成功加载并预处理 {len(processed_tasks)} 个任务。现在可以进行聚类分析了！",
                 context_updates={"data_processed": True}

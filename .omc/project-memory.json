@@ -1,0 +1,248 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1772373150196,
+  "projectRoot": "/Users/bohaiqing/opensource/git/SemanticJira-Analytic",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "pyproject.toml",
+          "requirements.txt"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "pip",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": "pytest",
+    "lintCommand": "ruff check",
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "app",
+      "docs",
+      "examples",
+      "scripts",
+      "tests"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "__pycache__": {
+      "path": "__pycache__",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1772373150184,
+      "keyFiles": [
+        "demo_chat.cpython-312.pyc"
+      ]
+    },
+    "app": {
+      "path": "app",
+      "purpose": "Application code",
+      "fileCount": 1,
+      "lastAccessed": 1772373150185,
+      "keyFiles": [
+        "__init__.py"
+      ]
+    },
+    "config": {
+      "path": "config",
+      "purpose": "Configuration files",
+      "fileCount": 3,
+      "lastAccessed": 1772373150185,
+      "keyFiles": [
+        "cluster_labels.json",
+        "cluster_labels.py",
+        "clustering_config.py"
+      ]
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 0,
+      "lastAccessed": 1772373150185,
+      "keyFiles": []
+    },
+    "examples": {
+      "path": "examples",
+      "purpose": "Example code",
+      "fileCount": 2,
+      "lastAccessed": 1772373150185,
+      "keyFiles": [
+        "cluster_labels_usage.py",
+        "clustering_config_usage.py"
+      ]
+    },
+    "frontend": {
+      "path": "frontend",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1772373150185,
+      "keyFiles": []
+    },
+    "htmlcov": {
+      "path": "htmlcov",
+      "purpose": null,
+      "fileCount": 27,
+      "lastAccessed": 1772373150186,
+      "keyFiles": [
+        "class_index.html",
+        "coverage_html_cb_dd2e7eb5.js",
+        "favicon_32_cb_c827f16f.png",
+        "function_index.html",
+        "index.html"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 0,
+      "lastAccessed": 1772373150186,
+      "keyFiles": []
+    },
+    "tests": {
+      "path": "tests",
+      "purpose": "Test files",
+      "fileCount": 0,
+      "lastAccessed": 1772373150186,
+      "keyFiles": []
+    },
+    "app/api": {
+      "path": "app/api",
+      "purpose": "API routes",
+      "fileCount": 0,
+      "lastAccessed": 1772373150187,
+      "keyFiles": []
+    },
+    "app/models": {
+      "path": "app/models",
+      "purpose": "Data models",
+      "fileCount": 1,
+      "lastAccessed": 1772373150187,
+      "keyFiles": [
+        "__init__.py"
+      ]
+    },
+    "frontend/src": {
+      "path": "frontend/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1772373150187,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "app/core/embedding.py",
+      "accessCount": 12,
+      "lastAccessed": 1772375324981,
+      "type": "file"
+    },
+    {
+      "path": "app/core/clustering.py",
+      "accessCount": 10,
+      "lastAccessed": 1772376296831,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 7,
+      "lastAccessed": 1772373432226,
+      "type": "directory"
+    },
+    {
+      "path": "app/core/incremental.py",
+      "accessCount": 6,
+      "lastAccessed": 1772375517637,
+      "type": "file"
+    },
+    {
+      "path": "app/core/conversation.py",
+      "accessCount": 2,
+      "lastAccessed": 1772373431208,
+      "type": "file"
+    },
+    {
+      "path": "pyproject.toml",
+      "accessCount": 2,
+      "lastAccessed": 1772373449193,
+      "type": "file"
+    },
+    {
+      "path": "app/core/executor.py",
+      "accessCount": 1,
+      "lastAccessed": 1772373235803,
+      "type": "file"
+    },
+    {
+      "path": "tests/unit/test_embedding_clustering_concurrency.py",
+      "accessCount": 1,
+      "lastAccessed": 1772373413816,
+      "type": "file"
+    },
+    {
+      "path": "tests/unit/test_clustering.py",
+      "accessCount": 1,
+      "lastAccessed": 1772373413869,
+      "type": "file"
+    },
+    {
+      "path": "app/models/__init__.py",
+      "accessCount": 1,
+      "lastAccessed": 1772373425343,
+      "type": "file"
+    },
+    {
+      "path": "tests/unit/test_embedding.py",
+      "accessCount": 1,
+      "lastAccessed": 1772373431260,
+      "type": "file"
+    },
+    {
+      "path": "demo_incremental.py",
+      "accessCount": 1,
+      "lastAccessed": 1772373444293,
+      "type": "file"
+    },
+    {
+      "path": "tests/unit/test_incremental_concurrency.py",
+      "accessCount": 1,
+      "lastAccessed": 1772373444348,
+      "type": "file"
+    },
+    {
+      "path": "performance_benchmark.py",
+      "accessCount": 1,
+      "lastAccessed": 1772373480551,
+      "type": "file"
+    },
+    {
+      "path": "PERFORMANCE_OPTIMIZATION.md",
+      "accessCount": 1,
+      "lastAccessed": 1772376091493,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

@@ -26,8 +26,8 @@ class TestVectorEmbedder:
                 summary="Fix login authentication bug",
                 description="User authentication failing after password reset",
                 created_at=datetime.now(),
-                status=TaskStatus.TODO,
-                priority=TaskPriority.HIGH,
+                updated_at=datetime.now(),
+                cluster_label="test",
                 cleaned_description="User authentication failing after password reset",
                 processed_at=datetime.now()
             ),
@@ -36,8 +36,8 @@ class TestVectorEmbedder:
                 summary="Add user profile picture upload",
                 description="Implement profile picture upload feature",
                 created_at=datetime.now(),
-                status=TaskStatus.IN_PROGRESS,
-                priority=TaskPriority.MEDIUM,
+                updated_at=datetime.now(),
+                cluster_label="test",
                 cleaned_description="Implement profile picture upload feature",
                 processed_at=datetime.now()
             )
