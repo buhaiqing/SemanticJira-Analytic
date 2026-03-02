@@ -77,7 +77,7 @@ def preprocess(
 def vectorize(
     input: str = typer.Option(..., "--input", "-i", help="Input processed JSON file"),
     output: str = typer.Option("./embedded_data.json", "--output", "-o", help="Output JSON file"),
-    model: str = typer.Option("BGE-M3", "--model", "-m", help="Embedding model to use"),
+    model: str = typer.Option("all-MiniLM-L6-v2", "--model", "-m", help="Embedding model to use"),
 ):
     """Generate vector embeddings for processed tasks."""
     console.print(f"[bold blue]🧠 Generating embeddings with {model}...[/bold blue]")

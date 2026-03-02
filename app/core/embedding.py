@@ -106,7 +106,7 @@ class VectorEmbedder:
     - Automatic memory management
     """
 
-    def __init__(self, model_name: str = "BGE-M3", cache_embeddings: bool = True,
+    def __init__(self, model_name: str = "all-MiniLM-L6-v2", cache_embeddings: bool = True,
                  max_batch_size: int = 64, memory_efficient: bool = True):
         """
         Initialize vector embedder with performance optimizations.
@@ -160,10 +160,11 @@ class VectorEmbedder:
                 # Map model names to actual model identifiers
                 model_mapping = {
                     "BGE-M3": "BAAI/bge-m3",
+                    "all-MiniLM-L6-v2": "sentence-transformers/all-MiniLM-L6-v2",
                     "text-embedding-3-small": "sentence-transformers/all-MiniLM-L6-v2"
                 }
 
-                model_id = model_mapping.get(self.model_name, "BAAI/bge-m3")
+                model_id = model_mapping.get(self.model_name, "sentence-transformers/all-MiniLM-L6-v2")
 
                 # Load model in thread pool to avoid blocking
                 loop = asyncio.get_event_loop()
@@ -244,7 +245,11 @@ class VectorEmbedder:
 
         # Estimate memory usage per token (rough estimate: 4 bytes per float16)
         # BGE-M3 produces 1024-dimensional embeddings = ~4KB per embedding
-        embedding_size_kb = 4  # Approximate
+        # all-MiniLM-L6-v2 produces 384-dimensional embeddings = ~1.5KB per embedding
+        if "all-MiniLM-L6-v2" in self.model_name or "text-embedding-3-small" in self.model_name:
+            embedding_size_kb = 1.5  # all-MiniLM-L6-v2
+        else:
+            embedding_size_kb = 4    # BGE-M3
 
         # Available memory budget (conservative estimate: 256MB for embeddings)
         memory_budget_kb = 256 * 1024
